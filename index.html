@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book Finder App</title>
+  <link rel="stylesheet" href="css/syles.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Book Finder</h1>
+    <button id="view-favorites-btn">View Favorites (<span id="fav-count">0</span>)</button>
+  </header>
+
+  <main>
+    <!-- Controls Section -->
+    <section class="controls">
+      <input type="text" id="search-input" placeholder="Search by title or author..." />
+      <select id="topic-select">
+        <option value="">All Topics</option>
+        <option value="fiction">Fiction</option>
+        <option value="mystery">Mystery</option>
+        <option value="history">History</option>
+        <option value="science">Science</option>
+      </select>
+      <button id="search-btn">Search</button>
+    </section>
+
+    <!-- Status Messages -->
+    <div id="status-message" class="hidden"></div>
+
+    <!-- Books Container -->
+    <section id="books-container" class="books-grid"> </section>
+  </main>
+
+  <!-- Modal for Book Details -->
+  <div id="book-modal" class="modal hidden">
+    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button id="close-modal" class="close-btn" type="button" aria-label="Close details">&times;</button>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <script src="js/modal.js" defer></script>
+  <script src="js/apps.js" defer></script>
+
+</body>
+</html>
